@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6ebf0; /* Gris très clair avec une touche de bleu */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #3b5998; /* Bleu foncé */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.game-modes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.game-link {
+    text-decoration: none;
+    background-color: #5b83b4; /* Bleu moyen */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.game-link:hover {
+    background-color: #4a72a3; /* Bleu légèrement plus foncé */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #444; /* Gris foncé */
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6ebf0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #3b5998;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #5b83b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a72a3;
+}
+
+#terminal {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: auto;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+canvas {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #444;
+    color: white;
+}
+
+/* Style général pour le conteneur */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espacement entre les sections */
+    margin-bottom: 20px;
+}
+
+/* Section des résultats */
+.results-section {
+    flex: 1; /* Prend tout l'espace disponible à gauche */
+    max-width: 600px; /* Largeur maximale pour la section des résultats */
+}
+
+#results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#results-table th, #results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#results-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Section du graphique */
+.chart-section {
+    flex: 1; /* Prend tout l'espace disponible à droite */
+    max-width: 600px; /* Largeur maximale pour la section du graphique */
+}
+
+#resultChart {
+    width: 100%;
+    height: auto;
+}
+
+/* Style général des boutons */
+button {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(145deg, #4CAF50, #2E7D32); /* Dégradé pour la texture */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Ombre pour effet 3D */
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #2E7D32, #4CAF50); /* Inverser le dégradé au survol */
+    transform: translateY(-
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humain vs Bot 🤖👤</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mode Humain vs Bot 🤖👤</h1>
+    </header>
+
+    <main>
+        <section class="content">
+            <p>Entrez un nombre entre 1 et 1000 pour que le bot puisse le deviner.</p>
+            
+            <div id="input-section">
+                <label for="human-number">Votre nombre :</label>
+                <input type="number" id="human-number" min="1" max="1000" required>
+                <button id="start-game">Lancer le jeu</button>
+            </div>
+
+            <div id="terminal">
+                <p><strong>Terminal:</strong></p>
+                <div id="log"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="Homepage.html" class="game-link">Retour au menu principal 🏠</a>
+    </footer>
+
+    <script>
+        const log = document.getElementById('log');
+        const startButton = document.getElementById('start-game');
+        const humanNumberInput = document.getElementById('human-number');
+
+        function logMessage(message) {
+            const p = document.createElement('p');
+            p.textContent = message;
+            log.appendChild(p);
+        }
+
+        function startGame() {
+            log.innerHTML = ''; // Clear the terminal
+
+            const humanNumber = parseInt(humanNumberInput.value); // Récupère le nombre saisi par l'humain
+            if (isNaN(humanNumber) || humanNumber < 1 || humanNumber > 1000) {
+                logMessage("Veuillez entrer un nombre valide entre 1 et 1000.");
+                return;
+            }
+
+            let botGuess = 500; // Le bot commence à deviner à 50
+            let attempts = 0;
+            let min = 1;
+            let max = 1000;
+
+            logMessage(`Vous avez choisi le nombre ${humanNumber}.`);
+            logMessage(`Le bot commence avec une estimation de ${botGuess}.`);
+
+            function botTurn() {
+                attempts++;
+                if (botGuess === humanNumber) {
+                    logMessage(`Le bot a trouvé votre nombre (${humanNumber}) en ${attempts} tentatives!`);
+                } else if (botGuess < humanNumber) {
+                    logMessage(`Le bot a proposé ${botGuess} : C'est plus !`);
+                    min = botGuess + 1;
+                    botGuess = Math.floor((min + max) / 2);
+                    setTimeout(botTurn, 1000); // Pause d'une seconde avant la prochaine tentative
+                } else {
+                    logMessage(`Le bot a proposé ${botGuess} : C'est moins !`);
+                    max = botGuess - 1;
+                    botGuess = Math.floor((min + max) / 2);
+                    setTimeout(botTurn, 1000); // Pause d'une seconde avant la prochaine tentative
+                }
+            }
+
+            setTimeout(botTurn, 1000); // Commence après une seconde
+        }
+
+        startButton.addEventListener('click', startGame);
+    </script>
+</body>
+</html>
