@@ -68,16 +68,16 @@
                     logMessage(`Le bot a proposé ${botGuess} : C'est plus !`);
                     min = botGuess + 1;
                     botGuess = Math.floor((min + max) / 2);
-                    setTimeout(botTurn, 1000); // Pause d'une seconde avant la prochaine tentative
+                    setTimeout(botTurn, 1); // Pause d'une seconde avant la prochaine tentative
                 } else {
                     logMessage(`Le bot a proposé ${botGuess} : C'est moins !`);
                     max = botGuess - 1;
                     botGuess = Math.floor((min + max) / 2);
-                    setTimeout(botTurn, 1000); // Pause d'une seconde avant la prochaine tentative
+                    setTimeout(botTurn, 1); // Pause d'une seconde avant la prochaine tentative
                 }
             }
 
-            setTimeout(botTurn, 1000); // Commence après une seconde
+            setTimeout(botTurn, 1); // Commence après une seconde
         }
 
         startButton.addEventListener('click', startGame);
